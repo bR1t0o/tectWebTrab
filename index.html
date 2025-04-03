@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trabalho de Tec Web</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <div class="cabecalho">
+        <h1>Bem vindo!</h1>
+        <div class="menu">
+            <button onclick="mostrarCadastro()">Cadastro</button>
+            <button onclick="mostrarLista()">Lista</button>
+        </div>
+    </div>
+
+
+    <div id="cadastro" class="pagina">
+        <h2>Cadastrar Item</h2>
+        <form onsubmit="adicionarItem(); return false;">
+            <div>
+                <label>Nome:</label>
+                <input type="text" id="itemNome" required>
+            </div>
+            <div>
+                <label>Descrição:</label>
+                <input id="itemDescricao"  required></input>
+            </div>
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+
+
+    <div id="lista" class="pagina" style="display:none">
+        <h2>Itens Cadastrados</h2>
+        <div id="itensCadastrados">
+            <p>Nenhum item cadastrado ainda.</p>
+        </div>
+    </div>
+
+    <script src="logica.js"></script>
+    <button id="button-darkmode" onclick=darkMode()>
+        Dark </button>
+</body>
+
+</html>
